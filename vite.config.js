@@ -11,6 +11,7 @@ export default defineConfig({
         // target: 'http://localhost:5000',
         target: 'https://polling-backend-77tv.onrender.com',
         changeOrigin: true,
+        ws: true,
       },
     },
   },
