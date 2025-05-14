@@ -9,8 +9,9 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/api');
+        const response = await fetch('https://polling-backend-77tv.onrender.com/api');
         const data = await response.json();
+        console.log(data.message);
         setMessage(data.message);
       } catch (error) {
         console.error('Error fetching data:', error);
