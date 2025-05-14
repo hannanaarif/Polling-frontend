@@ -204,7 +204,7 @@ function PollApp() {
   // Function to fetch available rooms
   const fetchAvailableRooms = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/rooms');
+      const response = await fetch('https://polling-backend-77tv.onrender.com/api/rooms');
       const data = await response.json();
       
       if (data.rooms) {
@@ -294,7 +294,7 @@ function PollApp() {
     if (!userState.isJoined || !userState.roomCode) return;
     
     // Connect to WebSocket server with reconnection options
-    const socket = io('http://localhost:5000', {
+    const socket = io('https://polling-backend-77tv.onrender.com', {
       reconnectionAttempts: 5,
       reconnectionDelay: 1000,
       reconnectionDelayMax: 5000,
@@ -867,7 +867,7 @@ function PollApp() {
     if (!userState.isJoined || !userState.roomCode) return;
     
     try {
-      const response = await fetch(`http://localhost:5000/api/rooms/${userState.roomCode}/users`);
+      const response = await fetch(`https://polling-backend-77tv.onrender.com/api/rooms/${userState.roomCode}/users`);
       const data = await response.json();
       
       if (data.users) {
