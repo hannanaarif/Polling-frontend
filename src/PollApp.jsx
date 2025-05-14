@@ -1174,7 +1174,7 @@ function PollApp() {
       
       <div className="room-info">
         <div className="room-details">
-          <span>Room: <strong>{userState.roomCode}</strong></span>
+          <span className="room-code">Room: <strong>{userState.roomCode}</strong></span>
           <span className="room-user-name">Joined as: <strong>{userState.name}</strong></span>
           <span className='room-user-count'>Users online: <strong>{roomState.userCount}</strong></span>
           <span className={`connection-status ${connectionStatus}`}>
